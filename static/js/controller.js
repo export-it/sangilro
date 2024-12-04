@@ -4,50 +4,61 @@ const items = {
     },
     11: { // 달음산 1코스
         path: "달음산_1코스.json",
-        color: "#fb0004"
+        color: "#fb0004",
+        zIndex : 6,
     },
     12: { // 달음산 2코스
         path: "달음산_2코스.json",
-        color: "#0b00ff"
+        color: "#0b00ff",
+        zIndex : 5,
     },
     13: { // 달음산 3코스
         path: "달음산_3코스.json",
-        color: "#fc6806"
+        color: "#fc6806",
+        zIndex : 4,
     },
     14: { // 달음산 4코스
         path: "달음산_4코스.json",
-        color: "#ffff00"
+        color: "#ffff00",
+        zIndex : 3,
     },
     15: { // 달음산 5코스
         path: "달음산_5코스.json",
-        color: "#fb00ff"
+        color: "#fb00ff",
+        zIndex : 2,
     },
     16: { // 달음산 기타코스
         path: "달음산_기타코스.json",
-        color: "#81b254"
+        color: "#81b254",
+        zIndex : 1,
     },
     20: { // 불광산 전체코스
         hasGroup : true,  group: [21, 22, 23, 24, 25] // 포함된 코스 ID
     },
     21: { // 불광산 1코스
         path: "불광산_1코스.json",
-        color: "#fb0004"
+        color: "#fb0004",
+        zIndex : 5
     },
     22: { // 불광산 2코스
         path: "불광산_2코스.json",
-        color: "#fc6806"
+        color: "#fc6806",
+        zIndex : 4
     },
     23: { // 불광산 3코스
         path: "불광산_3코스.json",
-        color: "#fb00ff"
+        color: "#fb00ff",
+        zIndex : 3
     },
     24: {
         path: "불광산_기타코스.json",
-        color: "#81b254"
+        color: "#81b254",
+        zIndex : 2
     },
     25: {
         path: "불광산_임도.json",
-        color: "#22ff05"
+        color: "#22ff05",
+        zIndex : 1
     }
 };
 

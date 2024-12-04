@@ -53,10 +53,11 @@ class MapControl {
             );
             const polyline = new kakao.maps.Polyline({
                 path: path,
-                strokeWeight: 5, // 선의 두께
-                strokeColor: item.color, // 선의 색상
-                strokeOpacity: 0.7, // 선의 투명도
-                strokeStyle: 'solid' // 선의 스타일
+                strokeWeight: 5,
+                strokeColor: item.color,
+                strokeOpacity: 0.7,
+                strokeStyle: 'solid',
+                zIndex : item.zIndex ?? 1
             });
             this.polylines.push(polyline);
             polyline.setMap(this.map);
@@ -67,7 +68,6 @@ class MapControl {
         markers.forEach(marker => {
             const infos = imageMap[marker.name] || [];
             infos.forEach(info => {
-                console.log(info);
                 var imageMarker = this._createImageMarker(marker, info );
                 imageMarker.setMap(this.map);
 
