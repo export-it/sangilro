@@ -984,10 +984,13 @@ function tabControl() {
             // 모든 탭 비활성화
             document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
             document.querySelectorAll(".course_list").forEach(list => list.classList.remove("active"));
-            // 선택된 탭 활성화
             tab.classList.add("active");
             const targetList = document.querySelector(tab.dataset.target);
             targetList.classList.add("active");
+            const courseBtn = document.getElementById('course_btn');
+            if (!courseBtn.classList.contains('open')) {
+              courseBtn.classList.add('open');
+            }            
         });
     });
 }

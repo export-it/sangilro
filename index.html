@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>기장군청 - 달음산, 불광산 등산로</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=952ffcbb4e8604c44f53532bb40d0544"></script>
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=952ffcbb4e8604c44f53532bb40d0544"></script>
     <link rel="stylesheet" href="./static/css/styles.css">
 </head>
+<script>
+    function toggleSection(element) {
+        element.classList.toggle("open");
+    }
+</script>
+
 <body>
     <div id="infoList2">
-        <p>코스</p>
+        <button class="toggle-button open" id="course_btn" onclick="toggleSection(this);">코스</button>
         <div class="tabs">
             <div class="tab active" data-target="#course_list_1">달음산</div>
             <div class="tab" data-target="#course_list_2">불광산</div>
         </div>
-        <ul id="course_list_1" class="course_list active">
-            <li class="course_btn" data="10"><span class="course_box course10"><em class="c1"></em><em class="c2"></em><em class="c3"></em><em class="c4"></em><em class="c5"></em><em class="c6"></em></span>전체코스</li>
+        <ul id="course_list_1" class="course_list active toggle-content">
+            <li class="course_btn" data="10"><span class="course_box course10"><em class="c1"></em><em
+                        class="c2"></em><em class="c3"></em><em class="c4"></em><em class="c5"></em><em
+                        class="c6"></em></span>전체코스</li>
             <li class="course_btn" data="11"><span class="course_box course11"></span>1코스</li>
             <li class="course_btn" data="12"><span class="course_box course12"></span>2코스</li>
             <li class="course_btn" data="13"><span class="course_box course13"></span>3코스</li>
@@ -24,8 +34,9 @@
             <li class="course_btn" data="15"><span class="course_box course15"></span>5코스</li>
             <li class="course_btn" data="16"><span class="course_box course16"></span>기타코스</li>
         </ul>
-        <ul id="course_list_2" class="course_list">
-            <li class="course_btn" data="20"><span class="course_box course20"><em class="c1"></em><em class="c2"></em><em class="c3"></em><em class="c4"></em><em class="c5"></em></span>전체코스</li>
+        <ul id="course_list_2" class="course_list toggle-content">
+            <li class="course_btn" data="20"><span class="course_box course20"><em class="c1"></em><em
+                        class="c2"></em><em class="c3"></em><em class="c4"></em><em class="c5"></em></span>전체코스</li>
             <li class="course_btn" data="21"><span class="course_box course21"></span>1코스</li>
             <li class="course_btn" data="22"><span class="course_box course22"></span>2코스</li>
             <li class="course_btn" data="23"><span class="course_box course23"></span>3코스</li>
@@ -33,10 +44,9 @@
             <li class="course_btn" data="25"><span class="course_box course25"></span>임도</li>
         </ul>
     </div>
-    
     <div id="infoList">
-        <p>범례</p>
-        <ul>
+        <button class="toggle-button reversed open" onclick="toggleSection(this);">범례</button>
+        <ul class="toggle-content">
             <li><span><img src="./static/image/icon/icon_01.png" alt=""></span>종합안내판</li>
             <li><span><img src="./static/image/icon/icon_02.png" alt=""></span>의자</li>
             <li><span><img src="./static/image/icon/icon_03.png" alt=""></span>방향안내판</li>
@@ -46,17 +56,23 @@
             <li><span><img src="./static/image/icon/icon_09.png" alt=""></span>정자</li>
             <li><span><img src="./static/image/icon/icon_10.png" alt=""></span>해충기피분사기</li>
         </ul>
+        
     </div>
+
 
     <div id="map"></div>
 
     <script src="./static/js/map.js"></script>
     <script src="./static/js/controller.js"></script>
 
-    <div class="btn_box"> <!--여기에 +,- 버튼 이미지 넣어주세요~!-->
+    <script>
+
+    </script>
+    <div class="btn_box">
         <button type="button" class="zoomin_btn" onclick="setRelativeMapLevel(-1)">지도확대</button>
         <button type="button" class="zoomout_btn" onclick="setRelativeMapLevel(+1)">지도축소</button>
-      </div>
+    </div>
 
 </body>
+
 </html>

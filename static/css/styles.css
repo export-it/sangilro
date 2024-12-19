@@ -376,14 +376,19 @@ a.item_list_map {
 
 #infoList {
     position: fixed;
-    bottom: 3em;
-    right: 3em;
+    bottom: 0px;
+    right: 0px;
     z-index: 999;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    width: 220px;
+    display: flex;
+    flex-direction: column-reverse;
+    max-height: 100vh;
+    overflow: hidden;
 }
 
-#infoList p {
+#infoList button {
+    all:unset;
+    cursor: pointer;
     background: #2866cc;
     color: #fff;
     padding: 15px;
@@ -391,14 +396,16 @@ a.item_list_map {
     width: 100%;
     font-size: 17px;
     font-weight: 600;
-    margin: 0
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #infoList ul {
     width: 100%;
     box-sizing: border-box;
     padding: 0 15px;
-    max-height: 200px;
     overflow-y: scroll;
     background: #fff;
     margin: 0
@@ -519,17 +526,37 @@ a.item_list_map {
     text-align: left;
 }
 
+.info-container {
+    position: fixed;
+    bottom: 0em;
+    left: 0px;
+    z-index: 999;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    pointer-events: none;
+}
+
+.info-container * {
+    pointer-events: all;
+}
+
 
 #infoList2 {
     position: fixed;
-    bottom: 24em;
-    right: 3em;
-    z-index: 999;
+    top: 0px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     width: 220px;
+    z-index: 999;
+    max-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
-#infoList2 p {
+#infoList2 button {
+    all:unset;
     background: #122443;
     color: #fff;
     padding: 15px;
@@ -537,14 +564,17 @@ a.item_list_map {
     width: 100%;
     font-size: 17px;
     font-weight: 600;
-    margin: 0
+    margin: 0;
+    cursor:pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #infoList2 ul {
     width: 100%;
     box-sizing: border-box;
     padding: 0 15px;
-    max-height: 200px;
     overflow-y: scroll;
     background: #fff;
     margin: 0
@@ -657,7 +687,7 @@ a.item_list_map {
 #infoList2 ul li span.course10 em.c6 {
     background: #81b254;
     left: 20px;
-    width :5px;
+    width: 5px;
 }
 
 #infoList2 ul li span.course20 em {
@@ -748,6 +778,7 @@ a.item_list_map {
 
 .tabs {
     display: flex;
+    height: 40px;
 }
 
 .tab {
@@ -767,12 +798,50 @@ a.item_list_map {
 }
 
 .course_list {
-    display: none; /* 기본적으로 숨김 처리 */
+    display: none;
+    /* 기본적으로 숨김 처리 */
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
 .course_list.active {
-    display: block; /* 활성화된 리스트만 표시 */
+    display: block;
+    /* 활성화된 리스트만 표시 */
+}
+
+.toggle-button:after {
+    content : "";
+    display: block;
+    width: 0;
+    height: 0;
+    margin-left: 8px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #fff; /* 위쪽에만 색상을 주어 아래 화살표 형태 */
+    transition: transform 0.3s ease;
+}
+
+.toggle-button.reversed:after{
+    transform: rotate(180deg);
+}
+
+.toggle-button.open:after {
+    transform: rotate(180deg);
+}
+
+.toggle-button.reversed.open:after{
+    transform: rotate(0deg);
+}
+
+.toggle-button ~ .toggle-content {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+}
+
+.toggle-button.open ~ .toggle-content {
+    height: fit-content;
+    opacity: 1;
+    max-height: none;
 }
