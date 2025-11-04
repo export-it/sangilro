@@ -1,0 +1,334 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: rgb(200, 200, 200);
+  margin: 0;
+  padding: 0;
+}
+
+.root {
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+  height: 100%;
+  max-width: 22.5rem;
+  min-height: 100vh;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  border: 1px solid #ddd;
+  box-shadow: 0 0.125rem 0.375rem rgba(0,0,0,0.05);
+}
+
+.header {
+  padding: 1rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0 0.25rem 0;
+}
+
+.header h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+}
+
+.header span {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+}
+
+.content {
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.facility-info {
+  list-style: none;
+  margin: 0 0;
+  padding: 1.25rem;
+  border: 1px solid #ddd;
+  border-radius: 0.75rem;
+  background: #fafafa;
+  font-size: 1rem;
+  color: #333;
+}
+
+.facility-info > li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.facility-info-title {
+  font-weight: bold;
+}
+
+.facility-info-value {
+  font-weight: normal;
+}
+
+.facility-info > li:last-child {
+  border-bottom: none;
+}
+
+.facility-info .sub-list {
+  margin: 0.375rem 0 0 1rem;
+  padding-left: 0.625rem;
+  color: #555;
+}
+
+.facility-info .sub-list li {
+  padding: 0.25rem 0;
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 0.75rem;
+  border: 1px solid #ddd;
+  box-shadow: 0 0.125rem 0.375rem rgba(0,0,0,0.05);
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.content h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.content h2 strong {
+  display: inline-block;
+  margin-left: 0.375rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.map-area {
+  margin-top: 1rem;
+  width: 100%;
+  height: 25rem;
+  background: #eaeaea;
+  border-radius: 0.625rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.map-area-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.625rem;
+}
+
+.map-area-header button {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  box-shadow: 0 0.125rem 0.375rem rgba(0,0,0,0.05);
+  pointer-events: auto;
+}
+
+.map-area-header button.active {
+  background: #2866cc;
+  color: #fff;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.number-marker {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 50%;
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: bold;
+  box-shadow: 0 0.125rem 0.375rem rgba(0,0,0,0.05);
+  border: 1px solid #ddd;
+}
+
+.course-info {
+  margin: 1.5rem 0;
+  color: #222;
+}
+
+.course-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0.5rem;
+}
+
+.course-list li {
+  display: grid;
+  grid-template-columns: 5.5rem 0.75rem 1fr;
+  align-items: center;
+  padding: 0.5rem 0;
+  line-height: 1.6;
+  font-size: 0.9375rem;
+}
+
+.course-list.lined li {
+  border-bottom: 1px solid #eee;
+}
+.course-list.lined li:last-child {
+  border-bottom: none;
+}
+
+.course-list .label {
+  color: #555;
+  font-weight: 500;
+}
+.course-list .sep {
+  text-align: center;
+  color: #bbb;
+}
+.course-list .value {
+  color: #222;
+  font-weight: 600;
+}
+
+.content .course-list li {
+  box-sizing: border-box;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 45rem;
+  margin: 0 auto 1.25rem;
+  overflow: hidden;
+  border-radius: 0.625rem;
+}
+
+.carousel .slides {
+  display: flex;
+  transition: transform 0.35s ease;
+  will-change: transform;
+}
+
+.carousel img {
+  width: 100%;
+  flex: 0 0 100%;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.carousel .prev,
+.carousel .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+  font-size: 1.625rem;
+  line-height: 1;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.carousel .prev { left: 0.625rem; }
+.carousel .next { right: 0.625rem; }
+.carousel .prev:hover,
+.carousel .next:hover { background: rgba(0,0,0,0.55); }
+
+.carousel .dots {
+  position: absolute;
+  left: 0; right: 0; bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.375rem;
+  pointer-events: none;
+}
+.carousel .dots button {
+  pointer-events: auto;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  border: 0;
+  background: rgba(255,255,255,0.6);
+  cursor: pointer;
+}
+.carousel .dots button.active { background: #fff; }
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  padding: 1rem 0.75rem;
+  border-top: 1px solid #ddd;
+  background: #fff;
+  color: #333;
+}
+
+.footer-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.8125rem;
+  color: #888;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.5;
+}
+
+.footer-label {
+  font-size: 0.875rem;
+  color: #555;
+}
+
+.footer-number {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0078d7;
+}

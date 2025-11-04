@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>달음산 등산로 샘플 페이지</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Web site created using create-react-app">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/logo192.png">
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Custom Fonts -->
+  <style>
+
+  </style>
+
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=952ffcbb4e8604c44f53532bb40d0544"></script>
+  <link rel="stylesheet" href="./static/css/styles.css">
+
+  <style data-jss="" data-meta="makeStyles">
+
+  </style>
+  <style data-emotion="css" data-s=""></style>
+</head>
+<body>
+  <div class="root">
+    <div class="header">
+        <h1>달음산 등산로</h1>
+        <h2>스마트 안내 시스템</h2>
+        <span>기장군 산림공원과</span>
+    </div>
+
+    <section class="content">
+        <ul class="facility-info">
+            <li>
+                <span class="facility-info-title">관리 번호 :</span>
+                <span class="facility-info-value">달음산-031</span>
+            </li>
+            <li>
+                <span class="facility-info-title">관리 시설 :</span>
+                <span class="facility-info-value">종합안내판</span>
+            </li>
+            <li>
+                <span class="facility-info-title">시설 규격 :</span>
+                <span class="facility-info-value">1800*1600</span>
+            </li>
+            <li>
+                <span class="facility-info-title">최근 정비 이력</span>
+              <ul class="sub-list">
+                <li><span class="facility-info-value">2024.11.30  : 스마트관리시스템 안내판 부착 </span></li>
+              </ul>
+            </li>
+          </ul>
+    </section>
+
+    <section class="content">
+        <div class="image-container">
+            <img src="https://d3tghglnsp1hky.cloudfront.net/image/5e8a4f46-3831-4d94-a4a8-266a1db4d569/svc/달음산-031.jpg" alt="image block" style="top: 0px; left: 0px; width: 100%; margin-bottom: -5px; object-fit: contain;">
+        </div>
+    </section>
+
+    <section class="content">
+        <h2>현재위치 : 제3코스 <strong>①</strong></h2>
+        <div class="map-area">
+            <div class="map-area-header">
+                <button class="satellite_btn active" onclick="toggleSatelliteMap()">위성지도</button>
+                <button class="terrain_btn" onclick="toggleTerrainMap()">지형지도</button>
+            </div>
+            <div id="map"></div>
+        </div>
+    </section>
+
+    <section class="content course-info">
+        <h2>달음산 3코스 안내</h2>
+        <ul class="course-list lined">
+          <li><span class="label">난이도</span><span class="sep"></span><span class="value">중</span></li>
+          <li><span class="label">거리</span><span class="sep"></span><span class="value">3.3km</span></li>
+          <li><span class="label">소요시간</span><span class="sep"></span><span class="value">140분</span></li>
+        </ul>
+      </section>
+      
+
+    <section class="content">
+        <h2>주변 주요 시설</h2>
+        <div class="carousel" data-autoplay="true" data-interval="3500">
+            <div class="slides">
+              <img src="./static/image/달음산/031.jpg" alt="slide 1">
+              <img src="./static/image/달음산/032.jpg" alt="slide 2">
+            </div>
+            <button class="prev" aria-label="이전">‹</button>
+            <button class="next" aria-label="다음">›</button>
+          </div>    
+    </section>
+
+    <footer class="footer">
+        <div class="footer-icon">icon</div>
+        <div class="footer-info">
+          <span class="footer-label">문의전화(기장군 산림공원과)</span>
+          <span class="footer-number">051-709-4545</span>
+        </div>
+      </footer>
+      
+
+  <script src="./static/js/map.js"></script>
+  <script src="./static/js/controller.js"></script>
+</body>
+</html>
